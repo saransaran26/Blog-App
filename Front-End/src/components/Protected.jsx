@@ -16,7 +16,7 @@ function Protected({ children }) {
   const verifyuser = async () => {
     try {
       const response = await axiosinstance.get(
-        "http://localhost:4000/user/get-current-user"
+        "https://create-blog-app-rvsw.onrender.com/user/get-current-user"
       );
       console.log("first", response.data);
       if (response.data.success) {

@@ -19,7 +19,7 @@ function Register() {
         console.log("success",values);
         try {
             dispatch(setloading(true))
-            const response = await axios.post('http://localhost:4000/user/register',values)
+            const response = await axios.post('https://create-blog-app-rvsw.onrender.com/user/register',values)
             dispatch(setloading(false))
             console.log(response.data.success);
             if(response.data.success){

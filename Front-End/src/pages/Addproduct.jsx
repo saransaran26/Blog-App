@@ -40,7 +40,7 @@ function Addproduct() {
         dispatch(setloading(true))
         console.log("before");
         const response = await axiosinstance.post(
-          "http://localhost:4000/postdata",
+          "https://create-blog-app-rvsw.onrender.com/postdata",
           payload
         );
         console.log("create",response.data);
@@ -61,7 +61,7 @@ function Addproduct() {
             console.log("formdata", formData);
             dispatch(setloading(true))
             const response = await axiosinstance.post(
-              "http://localhost:4000/upload",
+              "https://create-blog-app-rvsw.onrender.com/upload",
               formData
             );
             dispatch(setloading(false))

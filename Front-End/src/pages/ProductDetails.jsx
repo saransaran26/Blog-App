@@ -20,7 +20,7 @@ function ProductDetails() {
     try {
       dispatch(setloading(true));
       const response = await axiosinstance.get(
-        `http://localhost:4000/get-data/${id}`
+        `https://create-blog-app-rvsw.onrender.com/get-data/${id}`
       );
       // console.log("res",response.data.data);
       dispatch(setloading(false));
@@ -35,7 +35,7 @@ function ProductDetails() {
   const handleDelete = async() =>{
     try {
       dispatch(setloading(true))
-      const response = await axiosinstance.delete(`http://localhost:4000/delete/${id}`)
+      const response = await axiosinstance.delete(`https://create-blog-app-rvsw.onrender.com/delete/${id}`)
       dispatch(setloading(false))
       if(response.data.success){
         message.success(response.data.message)

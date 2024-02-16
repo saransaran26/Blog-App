@@ -16,7 +16,7 @@ function Profile() {
     try {
       dispatch(setloading(true));
       const response = await axiosinstance.get(
-        "http://localhost:4000/get-user-data"
+        "https://create-blog-app-rvsw.onrender.com/get-user-data"
       );
       dispatch(setloading(false));
       console.log("for profile", response.data.data);

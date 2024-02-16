@@ -43,7 +43,7 @@ function EditProduct() {
           };
           dispatch(setloading(true))
           const response = await axiosinstance.put(
-            `http://localhost:4000/edit/${id}`,
+            `https://create-blog-app-rvsw.onrender.com/edit/${id}`,
             payload
           );
           dispatch(setloading(false))
@@ -67,7 +67,7 @@ function EditProduct() {
               console.log("formdata", formData);
               dispatch(setloading(true))
               const response = await axiosinstance.post(
-                "http://localhost:4000/update-upload",
+                "https://create-blog-app-rvsw.onrender.com/update-upload",
                 formData
               );
               dispatch(setloading(false))
@@ -92,7 +92,7 @@ function EditProduct() {
         try {
           dispatch(setloading(true));
           const response = await axiosinstance.get(
-            `http://localhost:4000/get-data/${id}`
+            `https://create-blog-app-rvsw.onrender.com/get-data/${id}`
           );
           dispatch(setloading(false));
           if (response.data.success) {

@@ -18,7 +18,7 @@ function Home() {
     const fetchdatas = async () => {
       try {
         dispatch(setloading(true));
-        const response = await axiosinstance.get("http://localhost:4000");
+        const response = await axiosinstance.get("https://create-blog-app-rvsw.onrender.com");
         dispatch(setloading(false));
         console.log("success", response.data.data);
         if (response.data.success) {
